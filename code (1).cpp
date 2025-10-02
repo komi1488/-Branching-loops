@@ -5,26 +5,67 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-
+using namespace std;
 
 int main(){  
   double Ga = 0.9e5;
   double Re = 6.1e4;
-  double W_values[] = {0.1, 0.2, 0.5, 0.75, 0.85};
-  int Num_W = sizeof(W_values) / sizeof(W_values[0]);
+  double W;
   
-  for(int i = 0; i < Num_W; ++i) {
-    double W = W_values[i];
-    double A = W * pow(Re, 0.11);
-    double Pe;
+  W = 0.1;
+  double A;
+  A = W * pow(Re, 0.11);
+  double Pe;
     
-    if (A < 1) {
+  if (A < 1) {
       Pe = 4.75 * pow(A, 1.4) * pow(Ga, -0.17);
-    } else {
+  } else {
       Pe = 2.25e-3 * pow(A, -3.3) * pow(Ga, 0.29);
-    }
-    std::cout << "W = " << W << ", A " << A << ", Pe = " << Pe << std::endl;
   }
+  cout << "W = " << W << ", A = " << A << ", Pe = " << Pe << endl;
     
-  return 0; 
+  W = 0.2;
+  A = W * pow(Re, 0.11);
+    
+  if (A < 1) {
+      Pe = 4.75 * pow(A, 1.4) * pow(Ga, -0.17);
+  } else {
+      Pe = 2.25e-3 * pow(A, -3.3) * pow(Ga, 0.29);
+  }
+  cout << "W = " << W << ", A = " << A << ", Pe = " << Pe << endl;
+    
+    
+  W = 0.5;
+  A = W * pow(Re, 0.11);
+    
+  if (A < 1) {
+      Pe = 4.75 * pow(A, 1.4) * pow(Ga, -0.17);
+  } else {
+      Pe = 2.25e-3 * pow(A, -3.3) * pow(Ga, 0.29);
+  }
+  cout << "W = " << W << ", A = " << A << ", Pe = " << Pe << endl;
+    
+   
+  W = 0.75;
+  A = W * pow(Re, 0.11);
+    
+  if (A < 1) {
+      Pe = 4.75 * pow(A, 1.4) * pow(Ga, -0.17);
+  } else {
+      Pe = 2.25e-3 * pow(A, -3.3) * pow(Ga, 0.29);
+  }
+  cout << "W = " << W << ", A = " << A << ", Pe = " << Pe << endl;
+    
+  W = 0.85;
+  A = W * pow(Re, 0.11);
+    
+  if (A < 1) {
+      Pe = 4.75 * pow(A, 1.4) * pow(Ga, -0.17);
+  } else {
+      Pe = 2.25e-3 * pow(A, -3.3) * pow(Ga, 0.29);
+  }
+  cout << "W = " << W << ", A = " << A << ", Pe = " << Pe << endl;
+    
+  return 0;
+
 }
